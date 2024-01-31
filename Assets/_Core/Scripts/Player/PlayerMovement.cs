@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.Translate(Acceleration * _speedMovement * Time.fixedDeltaTime);
+        Vector2 acceleration = new Vector2(-Acceleration.y, Acceleration.x);
+        transform.Translate(acceleration * _speedMovement * Time.fixedDeltaTime);
     }
 }
