@@ -19,12 +19,20 @@ public class LifeController : MonoBehaviour
     public void AddLife(int addLife)
     {
         _life += addLife;
+        if (_life > 100)
+        {
+            _life = 100;
+        }
         _callbacksLife?.Invoke(_life * .1f);
     }
 
     public void LessLife(int lessLife)
     {
         _life -= lessLife;
+        if (_life < 0)
+        {
+            _life = 0;
+        }
         _callbacksLife?.Invoke(_life * .1f);
     }
 
