@@ -32,7 +32,6 @@ public class ShootBullet : MonoBehaviour
             GameObject bullet = Instantiate(_bullet, transform.position + transform.up * _spawnDistance, transform.rotation);
             Bullet bulletComponent = bullet.GetComponent<Bullet>();
             bulletComponent.TargetCollisionMask = _targetShootMask;
-            bulletComponent.Direction = -transform.right;
             _deltaShootTime = 0;
         }
     }

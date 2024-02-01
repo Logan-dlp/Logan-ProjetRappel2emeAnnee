@@ -5,7 +5,6 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public LayerMask TargetCollisionMask { get; set; }
-    public Vector2 Direction;
     
     [SerializeField] private float _bulletSpeed;
     [SerializeField] private int _damage = 0;
