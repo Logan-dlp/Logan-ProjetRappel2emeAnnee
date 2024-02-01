@@ -23,7 +23,7 @@ public class LifeController : MonoBehaviour
         {
             _life = 100;
         }
-        _callbacksLife?.Invoke(_life * .1f);
+        _callbacksLife?.Invoke(_life * .01f);
     }
 
     public void LessLife(int lessLife)
@@ -33,7 +33,7 @@ public class LifeController : MonoBehaviour
         {
             _life = 0;
         }
-        _callbacksLife?.Invoke(_life * .1f);
+        _callbacksLife?.Invoke(_life * .01f);
     }
 
     public void DestroyObject()
