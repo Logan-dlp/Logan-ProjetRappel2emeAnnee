@@ -12,7 +12,6 @@ public class Bullet : MonoBehaviour
     
     private void Update()
     {
-        //transform.Translate(transform.position + transform.up * _bulletSpeed * Time.deltaTime);
         transform.position += transform.up * _bulletSpeed * Time.deltaTime;
     }
 
