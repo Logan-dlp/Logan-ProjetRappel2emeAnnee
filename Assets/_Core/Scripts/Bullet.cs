@@ -5,13 +5,15 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public LayerMask TargetCollisionMask { get; set; }
+    public Vector2 Direction;
     
     [SerializeField] private float _bulletSpeed;
     [SerializeField] private int _damage = 0;
     
-    private void FixedUpdate()
+    private void Update()
     {
-        transform.Translate(-transform.right * _bulletSpeed * Time.fixedDeltaTime);
+        //transform.Translate(transform.position + transform.up * _bulletSpeed * Time.deltaTime);
+        transform.position += transform.up * _bulletSpeed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
