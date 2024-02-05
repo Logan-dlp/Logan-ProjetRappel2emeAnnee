@@ -5,9 +5,9 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public LayerMask TargetCollisionMask { get; set; }
+    public int Damage { get; set; }
     
     [SerializeField] private float _bulletSpeed;
-    [SerializeField] private int _damage = 0;
     
     private void Update()
     {
@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     {
         if (TargetCollisionMask == (TargetCollisionMask & (1 << collider.gameObject.layer)))
         {
-            collider.GetComponent<LifeController>().LessLife(_damage);
+            collider.GetComponent<LifeController>().LessLife(Damage);
             Destroy(gameObject);
         }
     }

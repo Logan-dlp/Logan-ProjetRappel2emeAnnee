@@ -771,6 +771,7 @@ GameObject:
   - component: {fileID: 957702817}
   - component: {fileID: 957702813}
   - component: {fileID: 957702818}
+  - component: {fileID: 957702819}
   m_Layer: 7
   m_Name: Lucia
   m_TagString: Untagged
@@ -834,7 +835,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1f5da492250e7964c8bc45448fd34944, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -940,12 +941,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 3104787778535511798, guid: 7842ec296cf08144482d4e4c508146cf, type: 3}
-  _isShoot: 1
+  _bulletDamage: 0
   _spawnDistance: 1
   _shootFrequency: 0.5
   _targetShootMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &957702819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957702812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9127ae058b09c42a855f11487e1d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableEnnemy: {fileID: 11400000, guid: cbdedbd227b4c5f43abe3d1b3091d138, type: 2}
 --- !u!1 &1379228818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,7 +1025,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6e012f0955f384d49a95715a4a518e58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1260,7 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 3104787778535511798, guid: 7842ec296cf08144482d4e4c508146cf, type: 3}
-  _isShoot: 0
+  _bulletDamage: 10
   _spawnDistance: 1
   _shootFrequency: 2
   _targetShootMask:

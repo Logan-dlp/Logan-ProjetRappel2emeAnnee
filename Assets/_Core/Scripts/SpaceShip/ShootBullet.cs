@@ -1,21 +1,19 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 public class ShootBullet : MonoBehaviour
 {
+    public int BulletDamage
+    {
+        get => _bulletDamage;
+        set => _bulletDamage = value;
+    }
+    public bool IsShoot { get; set; }
     
     [SerializeField] private GameObject _bullet;
-    [SerializeField] private bool _isShoot = false;
+    [SerializeField] private int _bulletDamage;
     [SerializeField] private float _spawnDistance;
     [SerializeField] private float _shootFrequency;
     [SerializeField] private LayerMask _targetShootMask;
-
-    public bool IsShoot
-    {
-        get => _isShoot;
-        set => _isShoot = value;
-    }
 
     private float _deltaShootTime = 1;
 
@@ -32,6 +30,7 @@ public class ShootBullet : MonoBehaviour
             GameObject bullet = Instantiate(_bullet, transform.position + transform.up * _spawnDistance, transform.rotation);
             Bullet bulletComponent = bullet.GetComponent<Bullet>();
             bulletComponent.TargetCollisionMask = _targetShootMask;
+            bulletComponent.Damage = _bulletDamage;
             _deltaShootTime = 0;
         }
     }
