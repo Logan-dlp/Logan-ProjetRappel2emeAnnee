@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05aa78a0fec8cba4fa84a07bb6e0d674, type: 3}
-  m_Name: new_ScriptableEnnemy
+  m_Name: Modha
   m_EditorClassIdentifier: 
-  _ennemyDamage: 10
+  _ennemyDamage: 0
