@@ -13,5 +13,9 @@ public class Sheild : MonoBehaviour
             Instantiate(_sheild, transform);
             _isActive = true;
         }
+        else
+        {
+            _sheild.GetComponent<LifeController>().AddLife(100);
+        }
     }
 }
