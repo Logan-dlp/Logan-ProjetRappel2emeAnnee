@@ -10,7 +10,6 @@ public class DropItem : MonoBehaviour
     private void OnDestroy()
     {
         int random = Random.Range(0, _itemArray.Length + _chanceNoHavingItems);
-        Debug.Log(random);
         if (random < _itemArray.Length)
         {
             Instantiate(_itemArray[random], transform.position, Quaternion.identity);
