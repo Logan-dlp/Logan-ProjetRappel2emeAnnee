@@ -34,4 +34,9 @@ public class ShootBullet : MonoBehaviour
             _deltaShootTime = 0;
         }
     }
+
+    public void AddDamage(int addDamage)
+    {
+        _bulletDamage += addDamage;
+    }
 }
