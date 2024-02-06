@@ -1,9 +1,18 @@
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
+[RequireComponent(
+    typeof(Collider2D),
+    typeof(PowerUp))]
 public class RecoveryItem : MonoBehaviour
 {
+    private PowerUp _powerUp;
+    
+    private void Awake()
+    {
+        _powerUp = GetComponent<PowerUp>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.TryGetComponent<Item>(out Item item))
@@ -11,40 +20,20 @@ public class RecoveryItem : MonoBehaviour
             switch (item.ItemsType)
             {
                 case ItemsType.Sheild:
-                    Sheild(); 
+                    _powerUp.Sheild();
                     break;
                 case ItemsType.Damage:
-                    Damage();
+                    _powerUp.Damage();
                     break;
                 case ItemsType.Life:
-                    Life();
+                    _powerUp.Life();
                     break;
                 case ItemsType.Coin:
-                    Coin();
+                    _powerUp.Coin();
                     break;
                 
             }
             Destroy(collider.gameObject);
         }
-    }
-
-    private void Sheild()
-    {
-        Debug.Log("add sheild");
-    }
-
-    private void Damage()
-    {
-        Debug.Log("Add damage");
-    }
-
-    private void Life()
-    {
-        Debug.Log("add Life");
-    }
-
-    private void Coin()
-    {
-        Debug.Log("add Coin");
     }
 }
