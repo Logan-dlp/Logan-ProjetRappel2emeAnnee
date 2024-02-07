@@ -550,6 +550,9 @@ GameObject:
   - component: {fileID: 1379228830}
   - component: {fileID: 1379228833}
   - component: {fileID: 1379228832}
+  - component: {fileID: 1379228841}
+  - component: {fileID: 1379228840}
+  - component: {fileID: 1379228839}
   - component: {fileID: 1379228831}
   - component: {fileID: 1379228836}
   - component: {fileID: 1379228835}
@@ -993,9 +996,9 @@ MonoBehaviour:
   _callbaksSheild:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1379228833}
-        m_TargetAssemblyTypeName: Sheild, Assembly-CSharp
-        m_MethodName: ActiveSheild
+      - m_Target: {fileID: 11400000, guid: 174e01636f3c3fe488e8061be6787808, type: 2}
+        m_TargetAssemblyTypeName: Event, Assembly-CSharp
+        m_MethodName: InvokeEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1008,10 +1011,10 @@ MonoBehaviour:
   _callbaksDamage:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1379228829}
-        m_TargetAssemblyTypeName: ShootBullet, Assembly-CSharp
-        m_MethodName: AddDamage
-        m_Mode: 3
+      - m_Target: {fileID: 11400000, guid: 604f056eb83e2ff4f91812a71934bf3d, type: 2}
+        m_TargetAssemblyTypeName: Event, Assembly-CSharp
+        m_MethodName: InvokeEvent
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1023,10 +1026,10 @@ MonoBehaviour:
   _callbaksLife:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1379228828}
-        m_TargetAssemblyTypeName: LifeController, Assembly-CSharp
-        m_MethodName: AddLife
-        m_Mode: 3
+      - m_Target: {fileID: 11400000, guid: 9b256dd95fa825d47829cc358c525924, type: 2}
+        m_TargetAssemblyTypeName: Event, Assembly-CSharp
+        m_MethodName: InvokeEvent
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1201,6 +1204,90 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: UI
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1379228839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379228818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404c00134e7ed7b418c3e5920308cda0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 11400000, guid: 9b256dd95fa825d47829cc358c525924, type: 2}
+  _callbaks:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379228828}
+        m_TargetAssemblyTypeName: LifeController, Assembly-CSharp
+        m_MethodName: AddLife
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1379228840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379228818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404c00134e7ed7b418c3e5920308cda0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 11400000, guid: 604f056eb83e2ff4f91812a71934bf3d, type: 2}
+  _callbaks:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379228829}
+        m_TargetAssemblyTypeName: ShootBullet, Assembly-CSharp
+        m_MethodName: AddDamage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1379228841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379228818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404c00134e7ed7b418c3e5920308cda0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 11400000, guid: 174e01636f3c3fe488e8061be6787808, type: 2}
+  _callbaks:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379228833}
+        m_TargetAssemblyTypeName: Sheild, Assembly-CSharp
+        m_MethodName: ActiveSheild
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1001 &1430395344
