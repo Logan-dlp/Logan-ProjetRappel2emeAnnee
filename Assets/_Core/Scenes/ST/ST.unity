@@ -525,6 +525,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Modha
       objectReference: {fileID: 0}
+    - target: {fileID: 5327846673604797817, guid: 96f378b7d632ac34fa2b0c1518c731b8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -559,6 +564,8 @@ GameObject:
   - component: {fileID: 1379228834}
   - component: {fileID: 1379228838}
   - component: {fileID: 1379228837}
+  - component: {fileID: 1379228843}
+  - component: {fileID: 1379228842}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -825,6 +832,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cb91136c-eddf-411e-858d-3ac66c3982b9
     m_ActionName: UI/Unpause[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: eaccce1cefa53d046ab9b293b0ae5adb, type: 2}
+        m_TargetAssemblyTypeName: InputEventButton, Assembly-CSharp
+        m_MethodName: InvokeEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ed9be33d-82cc-4a3b-b0df-05f6d93400d4
+    m_ActionName: Games/OpenInventory[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 0a3ffc38f3a62f446a129a12e5712707, type: 2}
+        m_TargetAssemblyTypeName: InputEventButton, Assembly-CSharp
+        m_MethodName: InvokeEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c01aee84-834b-407e-9a3e-4d0dd003b45a
+    m_ActionName: UI/CloseInventory[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Games
@@ -973,6 +1012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc62fc1c7bac294db7b40fe02de3da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scriptableInventory: {fileID: 11400000, guid: 75ba1bdc263431d47b2096a6c2fcf4a9,
+    type: 2}
   _sheildScriptableItem: {fileID: 11400000, guid: d3b87de0a01ab004d8c19d0d9696e635,
     type: 2}
   _damageScriptableItem: {fileID: 11400000, guid: ed3fd2aaf70fb6b428fa7c3b2e354bb1,
@@ -1290,6 +1331,62 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1379228842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379228818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12390727bda56e74fb0c18448adb8ba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputEventButton: {fileID: 11400000, guid: 0a3ffc38f3a62f446a129a12e5712707, type: 2}
+  _callbacks:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379228825}
+        m_TargetAssemblyTypeName: UnityEngine.InputSystem.PlayerInput, Unity.InputSystem
+        m_MethodName: SwitchCurrentActionMap
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Games
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1379228843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379228818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12390727bda56e74fb0c18448adb8ba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputEventButton: {fileID: 11400000, guid: eaccce1cefa53d046ab9b293b0ae5adb, type: 2}
+  _callbacks:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379228825}
+        m_TargetAssemblyTypeName: UnityEngine.InputSystem.PlayerInput, Unity.InputSystem
+        m_MethodName: SwitchCurrentActionMap
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: UI
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1430395344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1352,6 +1449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mykey
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097250437125308199, guid: 6de49c87110364f4a882d73d931ec26c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1491,6 +1593,8 @@ GameObject:
   - component: {fileID: 1575930650}
   - component: {fileID: 1575930649}
   - component: {fileID: 1575930648}
+  - component: {fileID: 1575930652}
+  - component: {fileID: 1575930651}
   m_Layer: 0
   m_Name: Unity
   m_TagString: Untagged
@@ -1764,6 +1868,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d97592a9947fb42a7489ae1099b5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1575930651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575930641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12390727bda56e74fb0c18448adb8ba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputEventButton: {fileID: 11400000, guid: 0a3ffc38f3a62f446a129a12e5712707, type: 2}
+  _callbacks:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1575930650}
+        m_TargetAssemblyTypeName: GameTime, Assembly-CSharp
+        m_MethodName: SetGameTime
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1575930652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575930641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12390727bda56e74fb0c18448adb8ba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputEventButton: {fileID: 11400000, guid: eaccce1cefa53d046ab9b293b0ae5adb, type: 2}
+  _callbacks:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1575930650}
+        m_TargetAssemblyTypeName: GameTime, Assembly-CSharp
+        m_MethodName: SetGameTime
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1750853954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1776,6 +1936,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lucia
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514536054709646659, guid: fa94b1de9824c194ebeac8559bc7f128,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5433125316542820683, guid: fa94b1de9824c194ebeac8559bc7f128,
         type: 3}
@@ -1894,6 +2059,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Nasbasd
+      objectReference: {fileID: 0}
+    - target: {fileID: 915635665615698075, guid: 2db6ffdf58e7dc84eb92e119895c7d68,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

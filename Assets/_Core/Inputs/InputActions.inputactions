@@ -24,9 +24,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Pause",
+                    "name": "OpenShop",
                     "type": "Button",
                     "id": "364a8158-dbbb-47ec-ae3e-2f9a51ecf39d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "OpenInventory",
+                    "type": "Button",
+                    "id": "ed9be33d-82cc-4a3b-b0df-05f6d93400d4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -107,7 +116,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Pause",
+                    "action": "OpenShop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c5c0dcba-3cf4-46b8-b7c1-feb6195de362",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenInventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -208,9 +228,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Unpause",
+                    "name": "CloseShop",
                     "type": "Button",
                     "id": "cb91136c-eddf-411e-858d-3ac66c3982b9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CloseInventory",
+                    "type": "Button",
+                    "id": "c01aee84-834b-407e-9a3e-4d0dd003b45a",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -643,7 +672,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Unpause",
+                    "action": "CloseShop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8bd1fa8e-b7c0-4356-b55b-84ac127e2432",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseInventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

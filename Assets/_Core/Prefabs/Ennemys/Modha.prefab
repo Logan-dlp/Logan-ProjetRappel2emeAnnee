@@ -221,4 +221,7 @@ MonoBehaviour:
   - {fileID: 9192979924836543375, guid: e01fd2fb9a714b64b8c82215384eb533, type: 3}
   - {fileID: 8769151107175986749, guid: c11fcf7ac0e44d741a426031a415a2cc, type: 3}
   - {fileID: 1556747141981995540, guid: e8ecc8c2a2f83834f815921d9673c5b4, type: 3}
+  - {fileID: 1177793114736802193, guid: 28531f25f23ff8941b0e3a4c4d3009e3, type: 3}
+  - {fileID: 1177793114736802193, guid: a23f0f1ef275d3147ac29c4ab38c76e0, type: 3}
+  - {fileID: 1177793114736802193, guid: ba33d1d25e2017b4e8456faadf3ad865, type: 3}
   _chanceNoHavingItems: 2
