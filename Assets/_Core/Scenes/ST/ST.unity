@@ -970,6 +970,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc62fc1c7bac294db7b40fe02de3da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sheildScriptableItem: {fileID: 11400000, guid: d3b87de0a01ab004d8c19d0d9696e635,
+    type: 2}
+  _damageScriptableItem: {fileID: 11400000, guid: ed3fd2aaf70fb6b428fa7c3b2e354bb1,
+    type: 2}
+  _lifeScriptableItem: {fileID: 11400000, guid: b909a34ffc093184483a14e30776b5c2,
+    type: 2}
+  _coinScriptableItem: {fileID: 11400000, guid: 4c58d213c48218845a22cef7483fae74,
+    type: 2}
 --- !u!114 &1379228832
 MonoBehaviour:
   m_ObjectHideFlags: 0
