@@ -6,6 +6,11 @@ using UnityEngine;
     typeof(PowerUp))]
 public class RecoveryItem : MonoBehaviour
 {
+    [SerializeField] private ScriptableItem _sheildScriptableItem;
+    [SerializeField] private ScriptableItem _damageScriptableItem;
+    [SerializeField] private ScriptableItem _lifeScriptableItem;
+    [SerializeField] private ScriptableItem _coinScriptableItem;
+    
     private PowerUp _powerUp;
     
     private void Awake()
@@ -17,21 +22,21 @@ public class RecoveryItem : MonoBehaviour
     {
         if (collider.TryGetComponent<Item>(out Item item))
         {
-            switch (item.ItemsType)
+            if (item._scriptableItem == _sheildScriptableItem)
             {
-                case ItemsType.Sheild:
-                    _powerUp.Sheild();
-                    break;
-                case ItemsType.Damage:
-                    _powerUp.Damage();
-                    break;
-                case ItemsType.Life:
-                    _powerUp.Life();
-                    break;
-                case ItemsType.Coin:
-                    _powerUp.Coin();
-                    break;
-                
+                _powerUp.Sheild();
+            }
+            else if (item._scriptableItem == _damageScriptableItem)
+            {
+                _powerUp.Damage();
+            }
+            else if (item._scriptableItem == _lifeScriptableItem)
+            {
+                _powerUp.Life();
+            }
+            else if (item._scriptableItem == _coinScriptableItem)
+            {
+                _powerUp.Coin();
             }
             Destroy(collider.gameObject);
         }
