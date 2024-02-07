@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 1113805202}
   - component: {fileID: 1113805201}
   - component: {fileID: 1113805200}
+  - component: {fileID: 1113805203}
   m_Layer: 5
   m_Name: Left
   m_TagString: Untagged
@@ -422,7 +423,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1113805201}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1113805203}
+        m_TargetAssemblyTypeName: BuyPowerUp, Assembly-CSharp
+        m_MethodName: InvokeEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1113805201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,6 +474,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113805198}
   m_CullTransparentMesh: 1
+--- !u!114 &1113805203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113805198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7d65483e6f3ef4093e93880252094d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _price: 10
+  _scriptableCoin: {fileID: 11400000, guid: 431f872f699536740ab49b47e427f85a, type: 2}
+  _callbacks:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: c1489c55f30fac640a67157fa8a8b718, type: 2}
+        m_TargetAssemblyTypeName: EventInt, Assembly-CSharp
+        m_MethodName: InvokeEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1247118418
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +515,7 @@ GameObject:
   - component: {fileID: 1247118422}
   - component: {fileID: 1247118421}
   - component: {fileID: 1247118420}
+  - component: {fileID: 1247118423}
   m_Layer: 5
   m_Name: Bottom
   m_TagString: Untagged
@@ -543,7 +586,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1247118421}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1247118423}
+        m_TargetAssemblyTypeName: BuyPowerUp, Assembly-CSharp
+        m_MethodName: InvokeEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1247118421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,6 +637,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247118418}
   m_CullTransparentMesh: 1
+--- !u!114 &1247118423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247118418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7d65483e6f3ef4093e93880252094d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _price: 10
+  _scriptableCoin: {fileID: 11400000, guid: 431f872f699536740ab49b47e427f85a, type: 2}
+  _callbacks:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: c1489c55f30fac640a67157fa8a8b718, type: 2}
+        m_TargetAssemblyTypeName: EventInt, Assembly-CSharp
+        m_MethodName: InvokeEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1357058286
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +753,7 @@ GameObject:
   - component: {fileID: 1508531280}
   - component: {fileID: 1508531279}
   - component: {fileID: 1508531278}
+  - component: {fileID: 1508531281}
   m_Layer: 5
   m_Name: Right
   m_TagString: Untagged
@@ -739,7 +824,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1508531279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1508531281}
+        m_TargetAssemblyTypeName: BuyPowerUp, Assembly-CSharp
+        m_MethodName: InvokeEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1508531279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -778,6 +875,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508531276}
   m_CullTransparentMesh: 1
+--- !u!114 &1508531281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508531276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7d65483e6f3ef4093e93880252094d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _price: 10
+  _scriptableCoin: {fileID: 11400000, guid: 431f872f699536740ab49b47e427f85a, type: 2}
+  _callbacks:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: c1489c55f30fac640a67157fa8a8b718, type: 2}
+        m_TargetAssemblyTypeName: EventInt, Assembly-CSharp
+        m_MethodName: InvokeEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1624130533
 GameObject:
   m_ObjectHideFlags: 0
