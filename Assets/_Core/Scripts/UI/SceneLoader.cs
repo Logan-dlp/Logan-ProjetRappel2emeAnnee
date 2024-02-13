@@ -13,4 +13,14 @@ public class SceneLoader : MonoBehaviour
             SceneManager.LoadScene(scenesNames, LoadSceneMode.Additive);
         }
     }
+
+    public void LoadScene(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
