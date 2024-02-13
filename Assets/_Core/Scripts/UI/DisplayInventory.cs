@@ -31,6 +31,12 @@ public class DisplayInventory : MonoBehaviour
             
             float x = _spriteDistance * Mathf.Cos(angle) + _rectTransform.position.x; 
             float y = _spriteDistance * Mathf.Sin(angle)+ _rectTransform.position.y;
+
+            if (_scriptableInventory.InventoryList.Count == 1)
+            {
+                x = 0 + _rectTransform.position.x;
+                y = 0 + _rectTransform.position.y;
+            }
             
             GameObject newItem = new GameObject(); 
             newItem.transform.SetParent(transform); 

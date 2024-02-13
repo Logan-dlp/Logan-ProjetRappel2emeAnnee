@@ -7,7 +7,7 @@ public class DropItem : MonoBehaviour
     [SerializeField] private GameObject[] _itemArray;
     [SerializeField] private int _chanceNoHavingItems;
     
-    private void OnDestroy()
+    public void DropItems()
     {
         int random = Random.Range(0, _itemArray.Length + _chanceNoHavingItems);
         if (random < _itemArray.Length)

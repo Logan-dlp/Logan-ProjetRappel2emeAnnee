@@ -14,4 +14,9 @@ public class InputEventButton : ScriptableObject
             Action?.Invoke();
         }
     }
+
+    public void InvokeEventWidthoutCtx()
+    {
+        Action?.Invoke();
+    }
 }
