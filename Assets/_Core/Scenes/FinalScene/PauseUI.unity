@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -921,10 +921,10 @@ RectTransform:
   - {fileID: 434702551}
   m_Father: {fileID: 1044848225}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.54937744, y: -127}
-  m_SizeDelta: {x: -1221.1, y: -380}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.5493164, y: -127}
+  m_SizeDelta: {x: 698.9, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &499370483
 MonoBehaviour:
@@ -941,15 +941,15 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 70
+    m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 1
+  m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 1
   m_CellSize: {x: 500, y: 100}
   m_Spacing: {x: 0, y: 125}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_Constraint: 1
+  m_ConstraintCount: 1
 --- !u!1 &604799673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1416,10 +1416,10 @@ RectTransform:
   - {fileID: 31286496}
   m_Father: {fileID: 1044848225}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.54871, y: -127}
-  m_SizeDelta: {x: -1221.1, y: -380}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.548584, y: -127}
+  m_SizeDelta: {x: 698.9, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1047799479
 MonoBehaviour:
@@ -1436,15 +1436,15 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 70
+    m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 1
+  m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 1
   m_CellSize: {x: 500, y: 100}
   m_Spacing: {x: 0, y: 125}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_Constraint: 1
+  m_ConstraintCount: 1
 --- !u!1 &1113805198
 GameObject:
   m_ObjectHideFlags: 0
