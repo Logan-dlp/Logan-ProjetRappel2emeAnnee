@@ -228,14 +228,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12390727bda56e74fb0c18448adb8ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputEventButton: {fileID: 11400000, guid: 0a3ffc38f3a62f446a129a12e5712707, type: 2}
+  _inputEventButton: {fileID: 11400000, guid: 8420295bdf4d9314995a506ac3f24b13, type: 2}
   _callbacks:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1137544616}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 42785236}
+        m_TargetAssemblyTypeName: SetCallbacksWidthEvent, Assembly-CSharp
+        m_MethodName: SetEventActive3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -256,25 +256,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12390727bda56e74fb0c18448adb8ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputEventButton: {fileID: 11400000, guid: eaccce1cefa53d046ab9b293b0ae5adb, type: 2}
+  _inputEventButton: {fileID: 11400000, guid: 4bb3b101a0076374ba9c6f5aff5cc893, type: 2}
   _callbacks:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1137544616}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1137544618}
-        m_TargetAssemblyTypeName: DisplayInventory, Assembly-CSharp
-        m_MethodName: RefreshInventory
+      - m_Target: {fileID: 42785236}
+        m_TargetAssemblyTypeName: SetCallbacksWidthEvent, Assembly-CSharp
+        m_MethodName: SetEventActive2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -282,7 +270,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &42785235
 MonoBehaviour:
@@ -296,14 +284,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12390727bda56e74fb0c18448adb8ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputEventButton: {fileID: 11400000, guid: a2ff156e0e1dd124db68274e454328f6, type: 2}
+  _inputEventButton: {fileID: 11400000, guid: 386d7a9f65e6af64bbd933a4d620fead, type: 2}
   _callbacks:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2011233268}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 42785236}
+        m_TargetAssemblyTypeName: SetCallbacksWidthEvent, Assembly-CSharp
+        m_MethodName: SetEventActive1
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -321,11 +309,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 42785228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12390727bda56e74fb0c18448adb8ba5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e76fcfff487bf0489710e128de0684b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputEventButton: {fileID: 11400000, guid: 515a2e4251d66f042af11ae49d3d95e4, type: 2}
-  _callbacks:
+  _callbacksEvent1:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1137544616}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2011233268}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _callbacksEvent2:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2011233268}
@@ -350,7 +364,49 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1137544616}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _callbacksEvent3:
+    m_PersistentCalls:
+      m_Calls: []
+  _callbacksUnactive:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2011233268}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1137544616}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &178960340
 GameObject:
@@ -722,7 +778,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137544609}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -1415,7 +1471,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011233265}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
