@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -6,6 +7,11 @@ public class AddScriptableInt : MonoBehaviour
 {
     [SerializeField] private ScriptableInt scriptableInt;
     [SerializeField] private UnityEvent<int> _callbacksCoin;
+
+    private void Start()
+    {
+        scriptableInt.Number = 0;
+    }
 
     public void Add(int addCoin)
     {

@@ -525,6 +525,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Modha
       objectReference: {fileID: 0}
+    - target: {fileID: 5327846673604797817, guid: 96f378b7d632ac34fa2b0c1518c731b8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1579,6 +1584,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mykey
       objectReference: {fileID: 0}
+    - target: {fileID: 9097250437125308199, guid: 6de49c87110364f4a882d73d931ec26c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2119,6 +2129,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lucia
       objectReference: {fileID: 0}
+    - target: {fileID: 4514536054709646659, guid: fa94b1de9824c194ebeac8559bc7f128,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5433125316542820683, guid: fa94b1de9824c194ebeac8559bc7f128,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2236,6 +2251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Nasbasd
+      objectReference: {fileID: 0}
+    - target: {fileID: 915635665615698075, guid: 2db6ffdf58e7dc84eb92e119895c7d68,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
