@@ -6,6 +6,11 @@ public class Sheild : MonoBehaviour
     
     private bool _isActive = false;
 
+    public void UnactiveSheild()
+    {
+        _isActive = false;
+    }
+    
     public void ActiveSheild()
     {
         if (!_isActive)
