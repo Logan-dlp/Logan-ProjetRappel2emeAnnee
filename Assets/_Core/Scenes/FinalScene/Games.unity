@@ -470,6 +470,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 676588631723494651, guid: 96f378b7d632ac34fa2b0c1518c731b8,
+        type: 3}
+      propertyPath: _callbacksDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1430395345}
     - target: {fileID: 2491870750056030288, guid: 96f378b7d632ac34fa2b0c1518c731b8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -524,11 +529,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Modha
-      objectReference: {fileID: 0}
-    - target: {fileID: 5327846673604797817, guid: 96f378b7d632ac34fa2b0c1518c731b8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -975,16 +975,16 @@ MonoBehaviour:
   _callbacksDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1379228828}
-        m_TargetAssemblyTypeName: LifeController, Assembly-CSharp
-        m_MethodName: DestroyObject
-        m_Mode: 1
+      - m_Target: {fileID: 1575930656}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: GameOver
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1379228829
@@ -1584,16 +1584,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mykey
       objectReference: {fileID: 0}
-    - target: {fileID: 9097250437125308199, guid: 6de49c87110364f4a882d73d931ec26c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6de49c87110364f4a882d73d931ec26c, type: 3}
+--- !u!114 &1430395345 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8780529875166702587, guid: 6de49c87110364f4a882d73d931ec26c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1430395344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f9b07b94deb3145a6712403088b912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1470625730
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,7 +2122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae14414c9583b41408156902050ca905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loadSceneInAwake: []
+  _loadSceneInAwake:
+  - LifeUI
+  - PauseUI
 --- !u!1001 &1750853954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2124,15 +2133,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 747666117382258738, guid: fa94b1de9824c194ebeac8559bc7f128,
+        type: 3}
+      propertyPath: _callbacksDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1430395345}
     - target: {fileID: 4514536054709646659, guid: fa94b1de9824c194ebeac8559bc7f128,
         type: 3}
       propertyPath: m_Name
       value: Lucia
-      objectReference: {fileID: 0}
-    - target: {fileID: 4514536054709646659, guid: fa94b1de9824c194ebeac8559bc7f128,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5433125316542820683, guid: fa94b1de9824c194ebeac8559bc7f128,
         type: 3}
@@ -2252,11 +2261,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nasbasd
       objectReference: {fileID: 0}
-    - target: {fileID: 915635665615698075, guid: 2db6ffdf58e7dc84eb92e119895c7d68,
+    - target: {fileID: 4106431556300471774, guid: 2db6ffdf58e7dc84eb92e119895c7d68,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: _callbacksDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1430395345}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
