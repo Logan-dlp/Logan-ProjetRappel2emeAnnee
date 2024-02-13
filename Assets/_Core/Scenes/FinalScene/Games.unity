@@ -561,6 +561,7 @@ GameObject:
   - component: {fileID: 1379228829}
   - component: {fileID: 1379228830}
   - component: {fileID: 1379228833}
+  - component: {fileID: 1379228848}
   - component: {fileID: 1379228832}
   - component: {fileID: 1379228841}
   - component: {fileID: 1379228840}
@@ -1520,6 +1521,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: EventInt, Assembly-CSharp
         m_MethodName: InvokeEvent
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1379228848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379228818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404c00134e7ed7b418c3e5920308cda0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 11400000, guid: 5f8e86f7d1de49f4fb483812ae058704, type: 2}
+  _callbaks:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379228833}
+        m_TargetAssemblyTypeName: Sheild, Assembly-CSharp
+        m_MethodName: UnactiveSheild
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
