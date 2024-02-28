@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DisplayInt : MonoBehaviour
+public class DisplayInt : MonoBehaviour, IDisplay
 {
     [SerializeField] private Text _text;
     

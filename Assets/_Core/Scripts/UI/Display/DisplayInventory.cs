@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(RectTransform))]
-public class DisplayInventory : MonoBehaviour
+public class DisplayInventory : MonoBehaviour, IDisplay
 {
     [SerializeField] private ScriptableInventory _scriptableInventory;
     [SerializeField] private float _spriteDistance;
