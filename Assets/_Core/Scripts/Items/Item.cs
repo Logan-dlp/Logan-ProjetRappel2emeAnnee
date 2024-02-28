@@ -8,13 +8,16 @@ using UnityEngine.UI;
     typeof(SpriteRenderer))]
 public class Item : MonoBehaviour
 {
-    private SpriteRenderer _spriteRenderer;
-    [SerializeField] private ScriptableItem _scriptableItem;
     public ScriptableItem ScriptableItem
     {
         get => _scriptableItem;
         set => _scriptableItem = value;
     }
+    
+    [SerializeField] private ScriptableItem _scriptableItem;
+    
+    private SpriteRenderer _spriteRenderer;
+    
 
     private void Awake()
     {

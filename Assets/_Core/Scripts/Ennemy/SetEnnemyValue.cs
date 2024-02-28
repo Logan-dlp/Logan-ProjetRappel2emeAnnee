@@ -4,10 +4,10 @@ using UnityEngine;
 [RequireComponent(typeof(ShootBullet))]
 public class SetEnnemyValue : MonoBehaviour
 {
-    private ShootBullet _shootBullet;
-
     [SerializeField] private ScriptableEnnemy _scriptableEnnemy;
 
+    private ShootBullet _shootBullet;
+    
     private void Awake()
     {
         _shootBullet = GetComponent<ShootBullet>();
