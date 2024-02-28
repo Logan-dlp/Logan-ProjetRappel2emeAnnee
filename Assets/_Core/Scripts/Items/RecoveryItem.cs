@@ -9,43 +9,44 @@ public class RecoveryItem : MonoBehaviour
 {
     [SerializeField] private ScriptableInventory _scriptableInventory;
     
-    [SerializeField] private ScriptableItem _sheildScriptableItem;
-    [SerializeField] private ScriptableItem _damageScriptableItem;
-    [SerializeField] private ScriptableItem _lifeScriptableItem;
-    [SerializeField] private ScriptableItem _coinScriptableItem;
+    [SerializeField] private ScriptablePowerUpItem sheildScriptablePowerUpItem;
+    [SerializeField] private ScriptablePowerUpItem damageScriptablePowerUpItem;
+    [SerializeField] private ScriptablePowerUpItem lifeScriptablePowerUpItem;
+    [SerializeField] private ScriptablePowerUpItem coinScriptablePowerUpItem;
     
     private PowerUp _powerUp;
     
     private void Awake()
     {
         _powerUp = GetComponent<PowerUp>();
-        _scriptableInventory.InventoryList = new List<ScriptableItem>();
+        _scriptableInventory.InventoryList = new List<ScriptableInventoryItem>();
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.TryGetComponent<Item>(out Item item))
+        if (collider.TryGetComponent<PowerUpItem>(out PowerUpItem powerUpItem))
         {
-            if (item.ScriptableItem == _sheildScriptableItem)
+            if (powerUpItem.ScriptablePowerUpItem == sheildScriptablePowerUpItem)
             {
                 _powerUp.Sheild();
             }
-            else if (item.ScriptableItem == _damageScriptableItem)
+            else if (powerUpItem.ScriptablePowerUpItem == damageScriptablePowerUpItem)
             {
                 _powerUp.Damage();
             }
-            else if (item.ScriptableItem == _lifeScriptableItem)
+            else if (powerUpItem.ScriptablePowerUpItem == lifeScriptablePowerUpItem)
             {
                 _powerUp.Life();
             }
-            else if (item.ScriptableItem == _coinScriptableItem)
+            else if (powerUpItem.ScriptablePowerUpItem == coinScriptablePowerUpItem)
             {
                 _powerUp.Coin();
             }
-            else
-            {
-                _scriptableInventory.InventoryList.Add(item.ScriptableItem);
-            }
+            
+            Destroy(collider.gameObject);
+        }else if (collider.TryGetComponent<InventoryItem>(out InventoryItem inventoryItem))
+        {
+            _scriptableInventory.InventoryList.Add(inventoryItem.ScriptablePowerUpItem);
             Destroy(collider.gameObject);
         }
     }

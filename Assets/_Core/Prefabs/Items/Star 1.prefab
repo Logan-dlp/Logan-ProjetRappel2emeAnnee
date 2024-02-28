@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1763346427377786260}
   - component: {fileID: 3665664175057469048}
   - component: {fileID: 1285967584019456294}
-  - component: {fileID: 306562403325563183}
+  - component: {fileID: 6094823497487473083}
   m_Layer: 0
   m_Name: Star 1
   m_TagString: Untagged
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &306562403325563183
+--- !u!114 &6094823497487473083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1177793114736802193}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92aab08f3bf4d2242ba8429e441f2d40, type: 3}
+  m_Script: {fileID: 11500000, guid: c54b9c42410105c4fbfdcf7cda256dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scriptableItem: {fileID: 11400000, guid: 24e761747f272db4c96ee5444f5109d3, type: 2}
+  _scriptableInventoryItem: {fileID: 11400000, guid: 220e662236401d142abc35ad9bb28c45,
+    type: 2}
