@@ -14,18 +14,20 @@ public class RecoveryItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.TryGetComponent<PowerUpItem>(out PowerUpItem powerUpItem))
+        if (collider.TryGetComponent<Item>(out Item item))
         {
-            foreach (IPowerUp powerUp in _powerUpArray)
+            if (item.IsPowerUp)
             {
-                powerUp.ActivePowerUp(powerUpItem.ScriptablePowerUpItem);
+                foreach (IPowerUp powerUp in _powerUpArray)
+                {
+                    powerUp.ActivePowerUp(item.ScriptableItem);
+                }
+            }
+            else
+            {
+                _inventory.AddInInventory(item.ScriptableItem);
             }
             
-            Destroy(collider.gameObject);
-        }
-        else if (collider.TryGetComponent<InventoryItem>(out InventoryItem inventoryItem))
-        {
-            _inventory.AddInInventory(inventoryItem.ScriptablePowerUpItem);
             Destroy(collider.gameObject);
         }
     }

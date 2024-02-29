@@ -13,9 +13,9 @@ public class DamagePowerUp : MonoBehaviour, IPowerUp
         _shootBullet = GetComponent<ShootBullet>();
     }
 
-    public void ActivePowerUp(ScriptablePowerUpItem scriptablePowerUpItem)
+    public void ActivePowerUp(ScriptableItem scriptableItem)
     {
-        if (scriptablePowerUpItem == _scriptablePowerUpItem)
+        if (scriptableItem == _scriptablePowerUpItem)
         {
             _shootBullet.AddDamage(1);
         }

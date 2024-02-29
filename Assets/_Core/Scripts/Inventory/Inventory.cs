@@ -8,11 +8,11 @@ public class Inventory : MonoBehaviour
 
     private void Awake()
     {
-        _scriptableInventory.InventoryList = new List<ScriptableInventoryItem>();
+        _scriptableInventory.InventoryList = new List<ScriptableItem>();
     }
 
-    public void AddInInventory(ScriptableInventoryItem scriptableInventoryItem)
+    public void AddInInventory(ScriptableItem scriptableItem)
     {
-        _scriptableInventory.InventoryList.Add(scriptableInventoryItem);
+        _scriptableInventory.InventoryList.Add(scriptableItem);
     }
 }

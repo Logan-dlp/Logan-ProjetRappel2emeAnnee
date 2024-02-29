@@ -1,18 +1,9 @@
 using UnityEngine;
 
-public class InventoryItem : MonoBehaviour
+public class InventoryItem : Item
 {
-    public ScriptableInventoryItem ScriptablePowerUpItem
-    {
-        get => _scriptableInventoryItem;
-        set => _scriptableInventoryItem = value;
-    }
-    
-    [SerializeField] private ScriptableInventoryItem _scriptableInventoryItem;
-    
     private SpriteRenderer _spriteRenderer;
     
-
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -20,6 +11,6 @@ public class InventoryItem : MonoBehaviour
 
     private void Start()
     {
-        _scriptableInventoryItem.Sprite = _spriteRenderer.sprite;
+        base._scriptableItem.Sprite = _spriteRenderer.sprite;
     }
 }

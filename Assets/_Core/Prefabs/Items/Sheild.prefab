@@ -171,5 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92aab08f3bf4d2242ba8429e441f2d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scriptablePowerUpItem: {fileID: 11400000, guid: d3b87de0a01ab004d8c19d0d9696e635,
+  _scriptableInventoryItem: {fileID: 11400000, guid: d3b87de0a01ab004d8c19d0d9696e635,
     type: 2}
+  _isPowerUp: 1

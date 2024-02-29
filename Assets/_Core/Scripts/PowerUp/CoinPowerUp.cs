@@ -13,9 +13,9 @@ public class CoinPowerUp : MonoBehaviour, IPowerUp
         _scriptableIntController = GetComponent<ScriptableIntController>();
     }
 
-    public void ActivePowerUp(ScriptablePowerUpItem scriptablePowerUpItem)
+    public void ActivePowerUp(ScriptableItem scriptableItem)
     {
-        if (scriptablePowerUpItem == _scriptablePowerUpItem)
+        if (scriptableItem == _scriptablePowerUpItem)
         {
             _scriptableIntController.Add(10);
         }

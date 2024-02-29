@@ -25,9 +25,9 @@ public class SheildPowerUp : MonoBehaviour, IPowerUp
         }
     }
 
-    public void ActivePowerUp(ScriptablePowerUpItem scriptablePowerUpItem)
+    public void ActivePowerUp(ScriptableItem scriptableItem)
     {
-        if (scriptablePowerUpItem == _scriptablePowerUpItem)
+        if (scriptableItem == _scriptablePowerUpItem)
         {
             ActiveSheild();
         }

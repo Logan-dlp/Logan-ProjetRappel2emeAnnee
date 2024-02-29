@@ -6,13 +6,7 @@ using UnityEngine.UI;
     typeof(Collider2D),
     typeof(Rigidbody2D),
     typeof(SpriteRenderer))]
-public class PowerUpItem : MonoBehaviour
+public class PowerUpItem : Item
 {
-    public ScriptablePowerUpItem ScriptablePowerUpItem
-    {
-        get => _scriptablePowerUpItem;
-        set => _scriptablePowerUpItem = value;
-    }
     
-    [SerializeField] private ScriptablePowerUpItem _scriptablePowerUpItem;
 }

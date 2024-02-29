@@ -13,9 +13,9 @@ public class LifePowerUp : MonoBehaviour, IPowerUp
         _lifeController = GetComponent<LifeController>();
     }
 
-    public void ActivePowerUp(ScriptablePowerUpItem scriptablePowerUpItem)
+    public void ActivePowerUp(ScriptableItem scriptableItem)
     {
-        if (scriptablePowerUpItem == _scriptablePowerUpItem)
+        if (scriptableItem == _scriptablePowerUpItem)
         {
             _lifeController.AddLife(10);
         }
