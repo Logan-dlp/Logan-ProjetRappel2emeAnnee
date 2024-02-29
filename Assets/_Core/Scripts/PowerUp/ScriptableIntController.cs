@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-public class AddScriptableInt : MonoBehaviour
+public class ScriptableIntController : MonoBehaviour
 {
     [SerializeField] private ScriptableInt scriptableInt;
     [SerializeField] private UnityEvent<int> _callbacksCoin;

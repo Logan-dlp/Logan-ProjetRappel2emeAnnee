@@ -171,4 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92aab08f3bf4d2242ba8429e441f2d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scriptableItem: {fileID: 11400000, guid: 4c58d213c48218845a22cef7483fae74, type: 2}
+  _scriptablePowerUpItem: {fileID: 11400000, guid: 4c58d213c48218845a22cef7483fae74,
+    type: 2}

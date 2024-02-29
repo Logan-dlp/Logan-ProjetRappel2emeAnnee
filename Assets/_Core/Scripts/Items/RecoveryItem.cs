@@ -2,23 +2,16 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(
-    typeof(Collider2D),
-    typeof(PowerUp))]
+[RequireComponent(typeof(Collider2D))]
 public class RecoveryItem : MonoBehaviour
 {
     [SerializeField] private ScriptableInventory _scriptableInventory;
     
-    [SerializeField] private ScriptablePowerUpItem sheildScriptablePowerUpItem;
-    [SerializeField] private ScriptablePowerUpItem damageScriptablePowerUpItem;
-    [SerializeField] private ScriptablePowerUpItem lifeScriptablePowerUpItem;
-    [SerializeField] private ScriptablePowerUpItem coinScriptablePowerUpItem;
-    
-    private PowerUp _powerUp;
+    private IPowerUp[] _powerUpArray;
     
     private void Awake()
     {
-        _powerUp = GetComponent<PowerUp>();
+        _powerUpArray = GetComponents<IPowerUp>();
         _scriptableInventory.InventoryList = new List<ScriptableInventoryItem>();
     }
 
@@ -26,25 +19,14 @@ public class RecoveryItem : MonoBehaviour
     {
         if (collider.TryGetComponent<PowerUpItem>(out PowerUpItem powerUpItem))
         {
-            if (powerUpItem.ScriptablePowerUpItem == sheildScriptablePowerUpItem)
+            foreach (IPowerUp powerUp in _powerUpArray)
             {
-                _powerUp.Sheild();
-            }
-            else if (powerUpItem.ScriptablePowerUpItem == damageScriptablePowerUpItem)
-            {
-                _powerUp.Damage();
-            }
-            else if (powerUpItem.ScriptablePowerUpItem == lifeScriptablePowerUpItem)
-            {
-                _powerUp.Life();
-            }
-            else if (powerUpItem.ScriptablePowerUpItem == coinScriptablePowerUpItem)
-            {
-                _powerUp.Coin();
+                powerUp.ActivePowerUp(powerUpItem.ScriptablePowerUpItem);
             }
             
             Destroy(collider.gameObject);
-        }else if (collider.TryGetComponent<InventoryItem>(out InventoryItem inventoryItem))
+        }
+        else if (collider.TryGetComponent<InventoryItem>(out InventoryItem inventoryItem))
         {
             _scriptableInventory.InventoryList.Add(inventoryItem.ScriptablePowerUpItem);
             Destroy(collider.gameObject);
