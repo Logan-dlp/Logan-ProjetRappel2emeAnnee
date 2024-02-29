@@ -1,18 +1,15 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public class RecoveryItem : MonoBehaviour
 {
-    [SerializeField] private ScriptableInventory _scriptableInventory;
-    
     private IPowerUp[] _powerUpArray;
+    private Inventory _inventory;
     
     private void Awake()
     {
         _powerUpArray = GetComponents<IPowerUp>();
-        _scriptableInventory.InventoryList = new List<ScriptableInventoryItem>();
+        _inventory = GetComponent<Inventory>();
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -28,7 +25,7 @@ public class RecoveryItem : MonoBehaviour
         }
         else if (collider.TryGetComponent<InventoryItem>(out InventoryItem inventoryItem))
         {
-            _scriptableInventory.InventoryList.Add(inventoryItem.ScriptablePowerUpItem);
+            _inventory.AddInInventory(inventoryItem.ScriptablePowerUpItem);
             Destroy(collider.gameObject);
         }
     }

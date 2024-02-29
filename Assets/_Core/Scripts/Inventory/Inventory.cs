@@ -1,18 +1,18 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private ScriptableInventory _scriptableInventory;
+
+    private void Awake()
     {
-        
+        _scriptableInventory.InventoryList = new List<ScriptableInventoryItem>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddInInventory(ScriptableInventoryItem scriptableInventoryItem)
     {
-        
+        _scriptableInventory.InventoryList.Add(scriptableInventoryItem);
     }
 }
