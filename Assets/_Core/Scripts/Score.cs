@@ -7,7 +7,7 @@ public class Score : MonoBehaviour, ISerializable<ScoreDTO>
 
     private void Awake()
     {
-        _scoreScriptableInt?.InvokeEvent(0);
+        _scoreScriptableInt?.SetNumber(0);
     }
 
     public ScoreDTO Serialized()
@@ -20,6 +20,6 @@ public class Score : MonoBehaviour, ISerializable<ScoreDTO>
 
     public void Deserialized(ScoreDTO dataTransferObject)
     {
-        _scoreScriptableInt.InvokeEvent(dataTransferObject.score);
+        _scoreScriptableInt.SetNumber(dataTransferObject.score);
     }
 }

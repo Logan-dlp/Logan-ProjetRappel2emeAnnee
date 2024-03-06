@@ -5,17 +5,25 @@ using UnityEngine;
 public class ScriptableInt : ScriptableObject
 {
     public Action<int> ActionInt;
-    public int Number { get; set; } = 0;
 
-    public void InvokeEvent(int number)
+    private int _number = 0;
+    public int Number => _number;
+
+    public void SetNumber(int number)
     {
-        Number = number;
+        _number = number;
         ActionInt?.Invoke(number);
     }
 
-    public void AddNumberEvent(int number)
+    public void AddNumber(int number)
     {
-        Number += number;
+        _number += number;
+        ActionInt?.Invoke(Number);
+    }
+    
+    public void SubstarctNumber(int number)
+    {
+        _number -= number;
         ActionInt?.Invoke(Number);
     }
 }
