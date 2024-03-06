@@ -737,12 +737,12 @@ GameObject:
   - component: {fileID: 1379228831}
   - component: {fileID: 1379228836}
   - component: {fileID: 1379228845}
-  - component: {fileID: 1379228847}
   - component: {fileID: 1379228851}
   - component: {fileID: 1379228833}
   - component: {fileID: 1379228850}
   - component: {fileID: 1379228849}
   - component: {fileID: 1379228848}
+  - component: {fileID: 1379228852}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -1283,34 +1283,6 @@ MonoBehaviour:
           m_StringArgument: Games
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1379228847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379228818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 635ac04b40a353d40b7cc96f3d4b86de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scriptableInt: {fileID: 11400000, guid: a52cd60e9c557c54fb7a1845fd9f40f5, type: 2}
-  _callbacksCoin:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: f723a787fc1e14447a2671caa6cc3dc1, type: 2}
-        m_TargetAssemblyTypeName: EventInt, Assembly-CSharp
-        m_MethodName: InvokeEvent
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1379228848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1366,6 +1338,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableInventory: {fileID: 11400000, guid: 75ba1bdc263431d47b2096a6c2fcf4a9,
+    type: 2}
+--- !u!114 &1379228852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379228818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4883493a7b404b4396b2ec3a5f5c55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreScriptableInt: {fileID: 11400000, guid: a52cd60e9c557c54fb7a1845fd9f40f5,
     type: 2}
 --- !u!1 &1470625730
 GameObject:
@@ -1900,7 +1886,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1660512421}
-  - component: {fileID: 1660512422}
   m_Layer: 6
   m_Name: ScoreListener
   m_TagString: Untagged
@@ -1923,34 +1908,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1379228820}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1660512422
+--- !u!1 &2089636877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2089636879}
+  - component: {fileID: 2089636878}
+  m_Layer: 0
+  m_Name: SaveSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2089636878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660512420}
+  m_GameObject: {fileID: 2089636877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5470ab84bcd199644aecd5b6cce8cfd1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8336279d39b9e0448a52c96fb1cfa361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventInt: {fileID: 11400000, guid: db2cc70347ad6ea48818a118eeb061d2, type: 2}
-  _callbacks:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1379228847}
-        m_TargetAssemblyTypeName: AddScriptableInt, Assembly-CSharp
-        m_MethodName: Add
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!4 &2089636879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089636877}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2136932292
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,3 +2164,4 @@ SceneRoots:
   - {fileID: 1575930642}
   - {fileID: 1379228820}
   - {fileID: 557094392}
+  - {fileID: 2089636879}
