@@ -4,27 +4,34 @@ using System.IO;
 using Newtonsoft.Json;
 using UnityEngine;
 
-public class VariableStorageSystem : MonoBehaviour
+public class VariableStorageSystem
 {
-    public static VariableStorageSystem instance;
+    private static VariableStorageSystem _instance;
 
-    private string _filePath;
+    public static VariableStorageSystem Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = new();
+            }
+
+            return _instance;
+        }
+    }
+    
+    private string _filePath = $"{Application.persistentDataPath}/VariableStorageSystem.json";
 
     private Dictionary<string, float> _saveFloats = new();
     private Dictionary<string, string> _saveStrings = new();
     private Dictionary<string, bool> _saveBools = new();
 
-    private void Awake()
-    {
-        instance = this;
-        _filePath = $"{Application.persistentDataPath}/VariableStorageSystem.json";
-    }
-
     public void SetFloat(string name, float value)
     {
         try
         {
-            Load();
+            LoadVariableStorage();
         }
         catch (Exception ex)
         {
@@ -46,7 +53,7 @@ public class VariableStorageSystem : MonoBehaviour
                 _saveFloats.Remove(name);
             }
             _saveFloats.Add(name, value);
-            Save();
+            SaveVariableStorage();
         }
     }
 
@@ -54,7 +61,7 @@ public class VariableStorageSystem : MonoBehaviour
     {
         try
         {
-            Load();
+            LoadVariableStorage();
         }
         catch (Exception ex)
         {
@@ -76,7 +83,7 @@ public class VariableStorageSystem : MonoBehaviour
                 _saveStrings.Remove(name);
             }
             _saveStrings.Add(name, value);
-            Save();
+            SaveVariableStorage();
         }
     }
 
@@ -84,7 +91,7 @@ public class VariableStorageSystem : MonoBehaviour
     {
         try
         {
-            Load();
+            LoadVariableStorage();
         }
         catch (Exception ex)
         {
@@ -106,7 +113,7 @@ public class VariableStorageSystem : MonoBehaviour
                 _saveBools.Remove(name);
             }
             _saveBools.Add(name, value);
-            Save();
+            SaveVariableStorage();
         }
     }
 
@@ -114,7 +121,7 @@ public class VariableStorageSystem : MonoBehaviour
     {
         try
         {
-            Load();
+            LoadVariableStorage();
             foreach (KeyValuePair<string,float> keyValuePair in _saveFloats)
             {
                 if (keyValuePair.Key == name)
@@ -135,7 +142,7 @@ public class VariableStorageSystem : MonoBehaviour
     {
         try
         {
-            Load();
+            LoadVariableStorage();
             foreach (KeyValuePair<string,string> keyValuePair in _saveStrings)
             {
                 if (keyValuePair.Key == name)
@@ -156,7 +163,7 @@ public class VariableStorageSystem : MonoBehaviour
     {
         try
         {
-            Load();
+            LoadVariableStorage();
             foreach (KeyValuePair<string,bool> keyValuePair in _saveBools)
             {
                 if (keyValuePair.Key == name)
@@ -173,7 +180,7 @@ public class VariableStorageSystem : MonoBehaviour
         return false;
     }
 
-    private void Save()
+    private void SaveVariableStorage()
     {
         SaveVarialbleStorage saveVarialbleStorage = new()
         {
@@ -189,7 +196,7 @@ public class VariableStorageSystem : MonoBehaviour
         writer.Write(json);
     }
 
-    private void Load()
+    private void LoadVariableStorage()
     {
         using StreamReader reader = new(_filePath);
         string json = reader.ReadToEnd();
