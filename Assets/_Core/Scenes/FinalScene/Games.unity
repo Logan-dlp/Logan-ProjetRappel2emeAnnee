@@ -1338,6 +1338,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scriptableInventory: {fileID: 11400000, guid: 75ba1bdc263431d47b2096a6c2fcf4a9,
     type: 2}
+  _itemReferenceArray:
+  - {fileID: 11400000, guid: 24e761747f272db4c96ee5444f5109d3, type: 2}
+  - {fileID: 11400000, guid: 220e662236401d142abc35ad9bb28c45, type: 2}
+  - {fileID: 11400000, guid: 29fce97bdc5fc804c9f345760e60e2bc, type: 2}
 --- !u!114 &1379228852
 MonoBehaviour:
   m_ObjectHideFlags: 0

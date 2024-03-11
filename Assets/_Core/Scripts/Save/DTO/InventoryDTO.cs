@@ -1,4 +1,6 @@
+using System.Collections.Generic;
+
 public class InventoryDTO : DataTransferObject
 {
-    public ScriptableInventory scriptableInventory;
+    public List<int> itemNumberReference;
 }

@@ -20,7 +20,7 @@ public class SaveSystem : MonoBehaviour
     {
         SaveData saveData = new()
         {
-            //inventoryDto = FindObjectOfType<Inventory>().Serialized(),
+            inventoryDto = FindObjectOfType<Inventory>().Serialized(),
             scoreDto = FindObjectOfType<Score>().Serialized(),
         };
 
@@ -48,7 +48,7 @@ public class SaveSystem : MonoBehaviour
 
             SaveData saveData = JsonConvert.DeserializeObject<SaveData>(json);
             
-            //FindObjectOfType<Inventory>().Deserialized(saveData.inventoryDto);
+            FindObjectOfType<Inventory>().Deserialized(saveData.inventoryDto);
             FindObjectOfType<Score>().Deserialized(saveData.scoreDto);
         }
         catch (Exception ex)

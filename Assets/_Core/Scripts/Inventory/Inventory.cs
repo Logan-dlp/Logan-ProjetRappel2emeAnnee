@@ -5,6 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour, ISerializable<InventoryDTO>
 {
     [SerializeField] private ScriptableInventory _scriptableInventory;
+    [SerializeField] private ScriptableItem[] _itemReferenceArray;
 
     private void Awake()
     {
@@ -18,14 +19,35 @@ public class Inventory : MonoBehaviour, ISerializable<InventoryDTO>
 
     public InventoryDTO Serialized()
     {
+        List<int> itemReference = new();
+
+        for (int i = 0; i < _scriptableInventory.InventoryList.Count; i++)
+        {
+            for (int j = 0; j < _itemReferenceArray.Length; j++)
+            {
+                if (_scriptableInventory.InventoryList[i] == _itemReferenceArray[j])
+                {
+                    itemReference.Add(j);
+                }
+            }
+        }
+        
         return new InventoryDTO
         {
-            scriptableInventory = _scriptableInventory,
+            itemNumberReference = itemReference
         };
     }
 
     public void Deserialized(InventoryDTO dataTransferObject)
     {
-        _scriptableInventory = dataTransferObject.scriptableInventory;
+        if (dataTransferObject.itemNumberReference != null)
+        {
+            _scriptableInventory.InventoryList = new();
+        }
+        
+        foreach (int i in dataTransferObject.itemNumberReference)
+        {
+            _scriptableInventory.InventoryList.Add(_itemReferenceArray[i]);
+        }
     }
 }
