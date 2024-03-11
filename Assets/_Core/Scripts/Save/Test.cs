@@ -16,6 +16,7 @@ public class Test : MonoBehaviour
     [ContextMenu("get")]
     public void Get()
     {
-        Debug.Log(VariableStorageSystem.instance.GetFloat("number"));
+        number = VariableStorageSystem.instance.GetFloat("number");
+        Debug.Log(number);
     }
 }

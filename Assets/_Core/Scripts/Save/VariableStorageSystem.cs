@@ -17,7 +17,7 @@ public class VariableStorageSystem : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        _filePath = $"{Application.persistentDataPath}/VariableStorageSystem.save";
+        _filePath = $"{Application.persistentDataPath}/VariableStorageSystem.json";
     }
 
     public void SetFloat(string name, float value)
@@ -26,18 +26,24 @@ public class VariableStorageSystem : MonoBehaviour
         {
             Load();
         }
-        catch
+        catch (Exception ex)
         {
-            
+            Debug.LogWarning($"Create file system\n{ex}");
         }
         finally
         {
+            bool haveKey= false;
             foreach (KeyValuePair<string,float> keyValuePair in _saveFloats)
             {
                 if (keyValuePair.Key == name)
                 {
-                    _saveFloats.Remove(keyValuePair.Key);
+                    haveKey = true;
                 }
+            }
+
+            if (haveKey)
+            {
+                _saveFloats.Remove(name);
             }
             _saveFloats.Add(name, value);
             Save();
@@ -50,14 +56,24 @@ public class VariableStorageSystem : MonoBehaviour
         {
             Load();
         }
+        catch (Exception ex)
+        {
+            Debug.LogWarning($"Create file system\n{ex}");
+        }
         finally
         {
+            bool haveKey= false;
             foreach (KeyValuePair<string,string> keyValuePair in _saveStrings)
             {
                 if (keyValuePair.Key == name)
                 {
-                    _saveStrings.Remove(keyValuePair.Key);
+                    haveKey = true;
                 }
+            }
+
+            if (haveKey)
+            {
+                _saveStrings.Remove(name);
             }
             _saveStrings.Add(name, value);
             Save();
@@ -70,14 +86,24 @@ public class VariableStorageSystem : MonoBehaviour
         {
             Load();
         }
+        catch (Exception ex)
+        {
+            Debug.LogWarning($"Create file system\n{ex}");
+        }
         finally
         {
+            bool haveKey= false;
             foreach (KeyValuePair<string,bool> keyValuePair in _saveBools)
             {
                 if (keyValuePair.Key == name)
                 {
-                    _saveBools.Remove(keyValuePair.Key);
+                    haveKey = true;
                 }
+            }
+
+            if (haveKey)
+            {
+                _saveBools.Remove(name);
             }
             _saveBools.Add(name, value);
             Save();
@@ -155,37 +181,23 @@ public class VariableStorageSystem : MonoBehaviour
             saveStrings = _saveStrings,
             saveBools = _saveBools,
         };
+        
+        string json = JsonConvert.SerializeObject(saveVarialbleStorage, Formatting.Indented);
 
-        try
-        {
-            string json = JsonConvert.SerializeObject(saveVarialbleStorage, Formatting.Indented);
-
-            using FileStream stream = new(_filePath, FileMode.Create);
-            using StreamWriter writer = new(stream);
-            writer.Write(json);
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError($"JSON serialization failed\n{ex}");
-        }
+        using FileStream stream = new(_filePath, FileMode.Create);
+        using StreamWriter writer = new(stream);
+        writer.Write(json);
     }
 
     private void Load()
     {
-        try
-        {
-            using StreamReader reader = new(_filePath);
-            string json = reader.ReadToEnd();
+        using StreamReader reader = new(_filePath);
+        string json = reader.ReadToEnd();
 
-            SaveVarialbleStorage saveVarialbleStorage = JsonConvert.DeserializeObject<SaveVarialbleStorage>(json);
+        SaveVarialbleStorage saveVarialbleStorage = JsonConvert.DeserializeObject<SaveVarialbleStorage>(json);
 
-            _saveFloats = saveVarialbleStorage.saveFloats;
-            _saveStrings = saveVarialbleStorage.saveStrings;
-            _saveBools = saveVarialbleStorage.saveBools;
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError($"JSON deserialization failed\n{ex}");
-        }
+        _saveFloats = saveVarialbleStorage.saveFloats;
+        _saveStrings = saveVarialbleStorage.saveStrings;
+        _saveBools = saveVarialbleStorage.saveBools;
     }
 }
