@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 
-[System.Serializable]
-public class SaveVarialbleStorage
+public class SaveVarialbleStorageDTO : DataTransferObject
 {
     public Dictionary<string, float> saveFloats;
     public Dictionary<string, string> saveStrings;

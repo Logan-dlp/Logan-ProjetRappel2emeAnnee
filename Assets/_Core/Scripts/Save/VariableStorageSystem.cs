@@ -1,210 +1,93 @@
-using System;
 using System.Collections.Generic;
-using System.IO;
-using Newtonsoft.Json;
 using UnityEngine;
 
-public class VariableStorageSystem
+public class VariableStorageSystem : MonoBehaviour, ISerializable<SaveVarialbleStorageDTO>
 {
-    private static VariableStorageSystem _instance;
-
-    public static VariableStorageSystem Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = new();
-            }
-
-            return _instance;
-        }
-    }
-    
-    private string _filePath = $"{Application.persistentDataPath}/VariableStorageSystem.json";
-
     private Dictionary<string, float> _saveFloats = new();
     private Dictionary<string, string> _saveStrings = new();
     private Dictionary<string, bool> _saveBools = new();
 
     public void SetFloat(string name, float value)
     {
-        try
+        if (_saveFloats.ContainsKey(name))
         {
-            LoadVariableStorage();
+            _saveFloats.Remove(name);
         }
-        catch (Exception ex)
-        {
-            Debug.LogWarning($"Create file system\n{ex}");
-        }
-        finally
-        {
-            bool haveKey= false;
-            foreach (KeyValuePair<string,float> keyValuePair in _saveFloats)
-            {
-                if (keyValuePair.Key == name)
-                {
-                    haveKey = true;
-                }
-            }
-
-            if (haveKey)
-            {
-                _saveFloats.Remove(name);
-            }
-            _saveFloats.Add(name, value);
-            SaveVariableStorage();
-        }
+        
+        _saveFloats.Add(name, value);
     }
 
     public void SetString(string name, string value)
     {
-        try
+        if (_saveStrings.ContainsKey(name))
         {
-            LoadVariableStorage();
+            _saveStrings.Remove(name);
         }
-        catch (Exception ex)
-        {
-            Debug.LogWarning($"Create file system\n{ex}");
-        }
-        finally
-        {
-            bool haveKey= false;
-            foreach (KeyValuePair<string,string> keyValuePair in _saveStrings)
-            {
-                if (keyValuePair.Key == name)
-                {
-                    haveKey = true;
-                }
-            }
-
-            if (haveKey)
-            {
-                _saveStrings.Remove(name);
-            }
-            _saveStrings.Add(name, value);
-            SaveVariableStorage();
-        }
+        
+        _saveStrings.Add(name, value);
     }
 
     public void SetBool(string name, bool value)
     {
-        try
+        if (_saveBools.ContainsKey(name))
         {
-            LoadVariableStorage();
+            _saveBools.Remove(name);
         }
-        catch (Exception ex)
-        {
-            Debug.LogWarning($"Create file system\n{ex}");
-        }
-        finally
-        {
-            bool haveKey= false;
-            foreach (KeyValuePair<string,bool> keyValuePair in _saveBools)
-            {
-                if (keyValuePair.Key == name)
-                {
-                    haveKey = true;
-                }
-            }
-
-            if (haveKey)
-            {
-                _saveBools.Remove(name);
-            }
-            _saveBools.Add(name, value);
-            SaveVariableStorage();
-        }
+        
+        _saveBools.Add(name, value);
     }
 
     public float GetFloat(string name)
     {
-        try
-        {
-            LoadVariableStorage();
-            foreach (KeyValuePair<string,float> keyValuePair in _saveFloats)
-            {
-                if (keyValuePair.Key == name)
-                {
-                    return keyValuePair.Value;
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError($"GetFloat failed\n{ex}");
-        }
 
-        return 0;
+        if (_saveFloats.ContainsKey(name))
+        {
+            return _saveFloats[name];
+        }
+        else
+        {
+            return 0;
+        }
     }
 
     public string GetString(string name)
     {
-        try
+        if (_saveStrings.ContainsKey(name))
         {
-            LoadVariableStorage();
-            foreach (KeyValuePair<string,string> keyValuePair in _saveStrings)
-            {
-                if (keyValuePair.Key == name)
-                {
-                    return keyValuePair.Value;
-                }
-            }
+            return _saveStrings[name];
         }
-        catch (Exception ex)
+        else
         {
-            Debug.LogError($"GetString failed\n{ex}");
+            return null;
         }
-
-        return null;
     }
 
     public bool GetBool(string name)
     {
-        try
+        if (_saveBools.ContainsKey(name))
         {
-            LoadVariableStorage();
-            foreach (KeyValuePair<string,bool> keyValuePair in _saveBools)
-            {
-                if (keyValuePair.Key == name)
-                {
-                    return keyValuePair.Value;
-                }
-            }
+            return _saveBools[name];
         }
-        catch (Exception ex)
+        else
         {
-            Debug.LogError($"GetString failed\n{ex}");
+            return false;
         }
-
-        return false;
     }
 
-    private void SaveVariableStorage()
+    public SaveVarialbleStorageDTO Serialized()
     {
-        SaveVarialbleStorage saveVarialbleStorage = new()
+        return new()
         {
             saveFloats = _saveFloats,
             saveStrings = _saveStrings,
             saveBools = _saveBools,
         };
-        
-        string json = JsonConvert.SerializeObject(saveVarialbleStorage, Formatting.Indented);
-
-        using FileStream stream = new(_filePath, FileMode.Create);
-        using StreamWriter writer = new(stream);
-        writer.Write(json);
     }
 
-    private void LoadVariableStorage()
+    public void Deserialized(SaveVarialbleStorageDTO dataTransferObject)
     {
-        using StreamReader reader = new(_filePath);
-        string json = reader.ReadToEnd();
-
-        SaveVarialbleStorage saveVarialbleStorage = JsonConvert.DeserializeObject<SaveVarialbleStorage>(json);
-
-        _saveFloats = saveVarialbleStorage.saveFloats;
-        _saveStrings = saveVarialbleStorage.saveStrings;
-        _saveBools = saveVarialbleStorage.saveBools;
+        _saveFloats = dataTransferObject.saveFloats;
+        _saveStrings = dataTransferObject.saveStrings;
+        _saveBools = dataTransferObject.saveBools;
     }
 }

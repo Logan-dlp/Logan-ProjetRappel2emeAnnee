@@ -1890,6 +1890,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2089636879}
   - component: {fileID: 2089636878}
+  - component: {fileID: 2089636881}
+  - component: {fileID: 2089636880}
   m_Layer: 0
   m_Name: SaveSystem
   m_TagString: Untagged
@@ -1924,6 +1926,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2089636880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089636877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088613d7d77b27f4baeb773c3b87aa97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test: 20
+--- !u!114 &2089636881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089636877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59bd072d316d2404fb48c0a002f91d4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2136932292
 GameObject:
   m_ObjectHideFlags: 0

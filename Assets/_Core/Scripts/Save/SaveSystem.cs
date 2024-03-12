@@ -12,7 +12,7 @@ public class SaveSystem : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        _filePath = $"{Application.persistentDataPath}/shootem.save";
+        _filePath = $"{Application.persistentDataPath}/shootem.json";
     }
 
     [ContextMenu("Save")]
@@ -22,6 +22,7 @@ public class SaveSystem : MonoBehaviour
         {
             inventoryDto = FindObjectOfType<Inventory>().Serialized(),
             scoreDto = FindObjectOfType<Score>().Serialized(),
+            saveVarialbleStorageDto = FindObjectOfType<VariableStorageSystem>().Serialized(),
         };
 
         try
@@ -50,6 +51,7 @@ public class SaveSystem : MonoBehaviour
             
             FindObjectOfType<Inventory>().Deserialized(saveData.inventoryDto);
             FindObjectOfType<Score>().Deserialized(saveData.scoreDto);
+            FindObjectOfType<VariableStorageSystem>().Deserialized(saveData.saveVarialbleStorageDto);
         }
         catch (Exception ex)
         {
