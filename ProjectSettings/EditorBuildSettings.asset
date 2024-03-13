@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/_Core/Scenes/FinalScene/Games.unity
     guid: 13db08a1297af794bbbd3277278e9599
   - enabled: 1
+    path: Assets/_Core/Scenes/FinalScene/InputPhone.unity
+    guid: c9c6d71879ea39e4b8720b4dea510193
+  - enabled: 1
     path: Assets/_Core/Scenes/FinalScene/LifeUI.unity
     guid: 4f0b0de68aa48ce4c892e390ce54df5e
   - enabled: 1
