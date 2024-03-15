@@ -15,4 +15,9 @@ public class Inventory : MonoBehaviour
     {
         _scriptableInventory.InventoryList.Add(scriptableItem);
     }
+
+    public void RemoveInInventory(ScriptableItem scriptableItem)
+    {
+        _scriptableInventory.InventoryList.Remove(scriptableItem);
+    }
 }

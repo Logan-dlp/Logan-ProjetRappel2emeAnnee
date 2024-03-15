@@ -11,6 +11,6 @@ public class InventoryItem : Item
 
     private void Start()
     {
-        base._scriptableItem.Sprite = _spriteRenderer.sprite;
+        _scriptableItem.Sprite = _spriteRenderer.sprite;
     }
 }
