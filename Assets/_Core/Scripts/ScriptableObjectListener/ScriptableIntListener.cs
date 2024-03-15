@@ -17,7 +17,7 @@ public class ScriptableIntListener : MonoBehaviour
         _scriptableInt.ActionInt -= InvokeEvent;
     }
 
-    public void InvokeEvent(int number)
+    private void InvokeEvent(int number)
     {
         _callbacks?.Invoke(number);
     }
