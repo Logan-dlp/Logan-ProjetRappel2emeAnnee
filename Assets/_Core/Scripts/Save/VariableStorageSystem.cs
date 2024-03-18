@@ -13,6 +13,16 @@ public class VariableStorageSystem : MonoBehaviour, ISerializable<SaveVarialbleS
         {
             _saveFloats.Remove(name);
         }
+        else if (_saveStrings.ContainsKey(name))
+        {
+            _saveStrings.Remove(name);
+            Debug.LogWarning("Please note !\nThe name of this variable was assigned with another type and has been deleted.");
+        } 
+        else if (_saveBools.ContainsKey(name))
+        {
+            _saveBools.Remove(name);
+            Debug.LogWarning("Please note !\nThe name of this variable was assigned with another type and has been deleted.");
+        }
         
         _saveFloats.Add(name, value);
     }
@@ -23,7 +33,17 @@ public class VariableStorageSystem : MonoBehaviour, ISerializable<SaveVarialbleS
         {
             _saveStrings.Remove(name);
         }
-        
+        else if (_saveFloats.ContainsKey(name))
+        {
+            _saveFloats.Remove(name);
+            Debug.LogWarning("Please note !\nThe name of this variable was assigned with another type and has been deleted.");
+        } 
+        else if (_saveBools.ContainsKey(name))
+        {
+            _saveBools.Remove(name);
+            Debug.LogWarning("Please note !\nThe name of this variable was assigned with another type and has been deleted.");
+        }
+
         _saveStrings.Add(name, value);
     }
 
@@ -32,6 +52,16 @@ public class VariableStorageSystem : MonoBehaviour, ISerializable<SaveVarialbleS
         if (_saveBools.ContainsKey(name))
         {
             _saveBools.Remove(name);
+        }
+        else if (_saveFloats.ContainsKey(name))
+        {
+            _saveFloats.Remove(name);
+            Debug.LogWarning("Please note !\nThe name of this variable was assigned with another type and has been deleted.");
+        } 
+        else if (_saveStrings.ContainsKey(name))
+        {
+            _saveStrings.Remove(name);
+            Debug.LogWarning("Please note !\nThe name of this variable was assigned with another type and has been deleted.");
         }
         
         _saveBools.Add(name, value);
@@ -76,7 +106,7 @@ public class VariableStorageSystem : MonoBehaviour, ISerializable<SaveVarialbleS
 
     public SaveVarialbleStorageDTO Serialized()
     {
-        return new()
+        return new SaveVarialbleStorageDTO()
         {
             saveFloats = _saveFloats,
             saveStrings = _saveStrings,

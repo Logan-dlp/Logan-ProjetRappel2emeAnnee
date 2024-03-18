@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class SaveSystem : MonoBehaviour
 {
-    public static SaveSystem instance;
+    private static SaveSystem _instance;
+
+    public static SaveSystem Instance => _instance;
 
     private string _filePath;
 
     private void Awake()
     {
-        instance = this;
+        _instance = this;
         _filePath = $"{Application.persistentDataPath}/shootem.json";
     }
 
