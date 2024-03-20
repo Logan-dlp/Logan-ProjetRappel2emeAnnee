@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class ShootBullet : MonoBehaviour
 {
+    [SerializeField] private int _bulletDamage;
     public int BulletDamage
     {
         get => _bulletDamage;
         set => _bulletDamage = value;
     }
-    public bool IsShoot { get; set; }
+
+    [SerializeField] private bool _isShoot;
+    public bool IsShoot { 
+        get => _isShoot;
+        set => _isShoot = value; 
+    }
     
     [SerializeField] private GameObject _bullet;
-    [SerializeField] private int _bulletDamage;
     [SerializeField] private float _spawnDistance;
     [SerializeField] private float _shootFrequency;
     [SerializeField] private LayerMask _targetShootMask;
