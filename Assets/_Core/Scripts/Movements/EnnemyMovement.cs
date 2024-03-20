@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class EnnemyMovement : MonoBehaviour, IMovement
+public class EnnemyMovement : MonoBehaviour
 {
     [SerializeField] private float _speedMovement;
     [SerializeField] private float _rotationOffset;
