@@ -23,7 +23,14 @@ public class DisplayInventory : MonoBehaviour
         {
             Destroy(transform.GetChild(i).gameObject);
         }
+
+        for (int i = 0; i < _scriptableInventory.InventoryList.Count; i++)
+        {
+            GameObject newItemInventory = Instantiate(_scriptableInventory.InventoryList[i].ButtonObject, transform);
+            newItemInventory.AddComponent<Image>().sprite = _scriptableInventory.InventoryList[i].Sprite;
+        }
         
+        /*
         for (int i = 0; i < _scriptableInventory.InventoryList.Count; i++)
         {
             float angle = _tau / _scriptableInventory.InventoryList.Count;
@@ -45,5 +52,6 @@ public class DisplayInventory : MonoBehaviour
             newItemImage.sprite = _scriptableInventory.InventoryList[i].Sprite; 
             newItemRectTransform.position = new Vector2(x, y);
         }
+        */
     }
 }

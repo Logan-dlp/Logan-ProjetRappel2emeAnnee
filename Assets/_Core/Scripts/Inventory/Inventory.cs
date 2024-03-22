@@ -5,14 +5,14 @@ using UnityEngine;
 public class Inventory : MonoBehaviour, ISerializable<InventoryDTO>
 {
     [SerializeField] private ScriptableInventory _scriptableInventory;
-    [SerializeField] private ScriptableItem[] _itemReferenceArray;
+    [SerializeField] private ScriptableInventoryItem[] _itemReferenceArray;
 
     private void Awake()
     {
-        _scriptableInventory.InventoryList = new List<ScriptableItem>();
+        _scriptableInventory.InventoryList = new List<ScriptableInventoryItem>();
     }
 
-    public void AddInInventory(ScriptableItem scriptableItem)
+    public void AddInInventory(ScriptableInventoryItem scriptableItem)
     {
         _scriptableInventory.InventoryList.Add(scriptableItem);
     }
@@ -51,8 +51,8 @@ public class Inventory : MonoBehaviour, ISerializable<InventoryDTO>
         }
     }
 
-    public void RemoveInInventory(ScriptableItem scriptableItem)
+    public void RemoveInInventory(ScriptableInventoryItem scriptableInventoryItem)
     {
-        _scriptableInventory.InventoryList.Remove(scriptableItem);
+        _scriptableInventory.InventoryList.Remove(scriptableInventoryItem);
     }
 }

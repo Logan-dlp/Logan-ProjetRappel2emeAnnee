@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Star 3
   m_EditorClassIdentifier: 
   _sprite: {fileID: 21300000, guid: ddd7ae1a5f031a845b5bd3dc2ea72c21, type: 3}
+  _buttonObject: {fileID: 5970080006266430863, guid: 160b29e473caa58459e74939371727ad,
+    type: 3}
