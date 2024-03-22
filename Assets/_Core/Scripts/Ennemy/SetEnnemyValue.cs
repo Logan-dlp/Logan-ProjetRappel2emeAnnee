@@ -15,7 +15,6 @@ public class SetEnnemyValue : MonoBehaviour
 
     private void Start()
     {
-        _shootBullet.IsShoot = true;
         _shootBullet.BulletDamage = _scriptableEnnemy.EnnemyDamage;
     }
 }

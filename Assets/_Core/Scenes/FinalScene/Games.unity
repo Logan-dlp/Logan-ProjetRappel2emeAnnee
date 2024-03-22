@@ -405,6 +405,7 @@ MonoBehaviour:
   - {fileID: 5327846673604797817, guid: 96f378b7d632ac34fa2b0c1518c731b8, type: 3}
   - {fileID: 9097250437125308199, guid: 6de49c87110364f4a882d73d931ec26c, type: 3}
   - {fileID: 915635665615698075, guid: 2db6ffdf58e7dc84eb92e119895c7d68, type: 3}
+  - {fileID: 1534464334397508960, guid: 11c7a3b140cb92a459cfe59a9c838210, type: 3}
 --- !u!1 &801926782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,8 +1150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbbf28aa31b7f0545a1b63400f0d5156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bullet: {fileID: 3104787778535511798, guid: 7842ec296cf08144482d4e4c508146cf, type: 3}
   _bulletDamage: 10
+  _isShoot: 0
+  _bullet: {fileID: 3104787778535511798, guid: 7842ec296cf08144482d4e4c508146cf, type: 3}
   _spawnDistance: 1
   _shootFrequency: 2
   _targetShootMask:
