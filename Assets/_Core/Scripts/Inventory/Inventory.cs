@@ -2,9 +2,10 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour, ISerializable<InventoryDTO>
 {
     [SerializeField] private ScriptableInventory _scriptableInventory;
+    [SerializeField] private ScriptableItem[] _itemReferenceArray;
 
     private void Awake()
     {
@@ -15,6 +16,39 @@ public class Inventory : MonoBehaviour
     {
         _scriptableInventory.InventoryList.Add(scriptableItem);
     }
+
+    public InventoryDTO Serialized()
+    {
+        List<int> itemReference = new();
+
+        for (int i = 0; i < _scriptableInventory.InventoryList.Count; i++)
+        {
+            for (int j = 0; j < _itemReferenceArray.Length; j++)
+            {
+                if (_scriptableInventory.InventoryList[i] == _itemReferenceArray[j])
+                {
+                    itemReference.Add(j);
+                }
+            }
+        }
+        
+        return new InventoryDTO
+        {
+            itemNumberReference = itemReference
+        };
+    }
+
+    public void Deserialized(InventoryDTO dataTransferObject)
+    {
+        if (dataTransferObject.itemNumberReference != null)
+        {
+            _scriptableInventory.InventoryList = new();
+        }
+        
+        foreach (int i in dataTransferObject.itemNumberReference)
+        {
+            _scriptableInventory.InventoryList.Add(_itemReferenceArray[i]);
+        }
 
     public void RemoveInInventory(ScriptableItem scriptableItem)
     {

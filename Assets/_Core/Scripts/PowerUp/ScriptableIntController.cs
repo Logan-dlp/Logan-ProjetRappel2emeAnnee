@@ -10,18 +10,18 @@ public class ScriptableIntController : MonoBehaviour
 
     private void Start()
     {
-        scriptableInt.Number = 0;
+        scriptableInt.SetNumber(0);
     }
 
     public void Add(int addCoin)
     {
-        scriptableInt.Number += addCoin;
+        scriptableInt.AddNumber(addCoin);
         _callbacksCoin?.Invoke(scriptableInt.Number);
     }
 
     public void Less(int lessCoin)
     {
-        scriptableInt.Number -= lessCoin;
+        scriptableInt.SubstarctNumber(lessCoin);
         _callbacksCoin.Invoke(scriptableInt.Number);
     }
 }

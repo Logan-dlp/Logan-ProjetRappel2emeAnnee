@@ -156,9 +156,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: db2cc70347ad6ea48818a118eeb061d2, type: 2}
-        m_TargetAssemblyTypeName: EventInt, Assembly-CSharp
-        m_MethodName: InvokeEvent
+      - m_Target: {fileID: 11400000, guid: a52cd60e9c557c54fb7a1845fd9f40f5, type: 2}
+        m_TargetAssemblyTypeName: ScriptableInt, Assembly-CSharp
+        m_MethodName: AddNumber
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

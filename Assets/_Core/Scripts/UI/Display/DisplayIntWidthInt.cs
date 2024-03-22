@@ -7,7 +7,7 @@ public class DisplayIntWidthInt : MonoBehaviour
     [SerializeField] private ScriptableInt _scriptableInt;
     [SerializeField] private Text _text;
 
-    private void Start()
+    private void LateUpdate()
     {
         _text.text = _scriptableInt.Number.ToString();
     }
