@@ -49,5 +49,9 @@ public class Inventory : MonoBehaviour, ISerializable<InventoryDTO>
         {
             _scriptableInventory.InventoryList.Add(_itemReferenceArray[i]);
         }
+
+    public void RemoveInInventory(ScriptableItem scriptableItem)
+    {
+        _scriptableInventory.InventoryList.Remove(scriptableItem);
     }
 }

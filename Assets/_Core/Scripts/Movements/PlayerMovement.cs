@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour, IMovement
+public class PlayerMovement : MonoBehaviour
 {
     public Vector2 Acceleration { get; set; }
 

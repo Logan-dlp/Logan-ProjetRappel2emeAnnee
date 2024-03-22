@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DisplayIntWidthInt : MonoBehaviour, IDisplay
+public class DisplayIntWidthInt : MonoBehaviour
 {
     [SerializeField] private ScriptableInt _scriptableInt;
     [SerializeField] private Text _text;
