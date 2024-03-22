@@ -4,7 +4,8 @@ public class SheildPowerUp : MonoBehaviour, IPowerUp
 {
     [SerializeField] private ScriptablePowerUpItem _scriptablePowerUpItem;
     [SerializeField] private GameObject _sheild;
-    
+
+    private GameObject _sheildInstance;
     private bool _isActive = false;
 
     public void UnactiveSheild()
@@ -16,12 +17,12 @@ public class SheildPowerUp : MonoBehaviour, IPowerUp
     {
         if (!_isActive)
         {
-            Instantiate(_sheild, transform);
+            _sheildInstance = Instantiate(_sheild, transform);
             _isActive = true;
         }
         else
         {
-            _sheild.GetComponent<LifeController>().AddLife(100);
+            _sheildInstance.GetComponent<LifeController>().AddLife(100);
         }
     }
 
