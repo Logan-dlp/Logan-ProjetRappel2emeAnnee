@@ -44,11 +44,12 @@ public class Inventory : MonoBehaviour, ISerializable<InventoryDTO>
         {
             _scriptableInventory.InventoryList = new();
         }
-        
+
         foreach (int i in dataTransferObject.itemNumberReference)
         {
             _scriptableInventory.InventoryList.Add(_itemReferenceArray[i]);
         }
+    }
 
     public void RemoveInInventory(ScriptableItem scriptableItem)
     {
