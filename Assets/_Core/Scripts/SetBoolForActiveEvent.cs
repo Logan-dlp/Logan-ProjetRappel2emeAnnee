@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class SetCallbacksWidthEvent : MonoBehaviour
+public class SetBoolForActiveEvent : MonoBehaviour
 {
     [SerializeField] private UnityEvent _callbacksEvent1;
     [SerializeField] private UnityEvent _callbacksEvent2;
