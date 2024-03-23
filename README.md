@@ -6,14 +6,14 @@
     * Move Spaceship
     * Shoot and kill ennemy Spaceship
     * Recovery and buy PowerUp in shop
-    * Recovery and stoke stars in inventory
+    * Recovery, stoke and remove stars in inventory
 ## 🎮 Input
 (**In game**) <br>
-**Movement** - wasd/zqsd <br>
-**Shoot** - Space <br>
-**Open Settings** - Escape <br>
-**Open Shop** - a/q <br>
-**Open Inventory** - e <br>
+**Movement** - wasd/zqsd / Left Stick <br>
+**Shoot** - Space / Right Trigger <br>
+**Open Settings** - Escape / Start <br>
+**Open Shop** - a/q / Button North <br>
+**Open Inventory** - e / Button West <br>
 ## 💻 Installation
 1. Clone the repo
 ```
