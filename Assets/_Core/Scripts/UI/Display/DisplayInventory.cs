@@ -6,15 +6,6 @@ using UnityEngine.UI;
 public class DisplayInventory : MonoBehaviour
 {
     [SerializeField] private ScriptableInventory _scriptableInventory;
-    [SerializeField] private float _spriteDistance;
-
-    private RectTransform _rectTransform;
-    private const float _tau = 2 * Mathf.PI;
-
-    private void Awake()
-    {
-        _rectTransform = GetComponent<RectTransform>();
-    }
 
     public void RefreshInventory()
     {
@@ -28,30 +19,7 @@ public class DisplayInventory : MonoBehaviour
         {
             GameObject newItemInventory = Instantiate(_scriptableInventory.InventoryList[i].ButtonObject, transform);
             newItemInventory.AddComponent<Image>().sprite = _scriptableInventory.InventoryList[i].Sprite;
+            newItemInventory.GetComponent<OnClickInventory>().ScriptableInventoryItem = _scriptableInventory.InventoryList[i];
         }
-        
-        /*
-        for (int i = 0; i < _scriptableInventory.InventoryList.Count; i++)
-        {
-            float angle = _tau / _scriptableInventory.InventoryList.Count;
-            angle *= i + 1;
-            
-            float x = _spriteDistance * Mathf.Cos(angle) + _rectTransform.position.x; 
-            float y = _spriteDistance * Mathf.Sin(angle)+ _rectTransform.position.y;
-
-            if (_scriptableInventory.InventoryList.Count == 1)
-            {
-                x = 0 + _rectTransform.position.x;
-                y = 0 + _rectTransform.position.y;
-            }
-            
-            GameObject newItem = new GameObject(); 
-            newItem.transform.SetParent(transform); 
-            RectTransform newItemRectTransform = newItem.AddComponent<RectTransform>(); 
-            Image newItemImage = newItem.AddComponent<Image>(); 
-            newItemImage.sprite = _scriptableInventory.InventoryList[i].Sprite; 
-            newItemRectTransform.position = new Vector2(x, y);
-        }
-        */
     }
 }
