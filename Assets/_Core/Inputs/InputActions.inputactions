@@ -109,8 +109,30 @@
                 },
                 {
                     "name": "",
+                    "id": "41fcbf25-caa5-441d-ac6f-59dbd0b82e7a",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movements",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "7ee1bf5c-47d5-4614-9803-a8f4c9cddcb5",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1078329-c682-4b91-9038-13529d1dc504",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -131,6 +153,17 @@
                 },
                 {
                     "name": "",
+                    "id": "faae6fe8-e74f-4fc5-858c-b03c6b85bc16",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenShop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "c5c0dcba-3cf4-46b8-b7c1-feb6195de362",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -142,8 +175,30 @@
                 },
                 {
                     "name": "",
+                    "id": "b2112189-5fb9-49fd-b433-9ab1935d0676",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "7ceff30c-4f4a-4c72-93b8-6c8f9d59cdc5",
                     "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenSettings",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f13c5fb1-457e-4683-bcc0-bbe7eecd4614",
+                    "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -707,6 +762,17 @@
                 },
                 {
                     "name": "",
+                    "id": "fd9a90cc-5647-4a57-9879-5999617f81f6",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseShop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "8bd1fa8e-b7c0-4356-b55b-84ac127e2432",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -718,8 +784,30 @@
                 },
                 {
                     "name": "",
+                    "id": "04fcfb72-9479-41e6-9506-f006e3a9784d",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6720c6be-47af-4714-a856-b86e6aa1991c",
                     "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseSettings",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "37a57de2-e226-4f42-9e9c-c05c0ab217e8",
+                    "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

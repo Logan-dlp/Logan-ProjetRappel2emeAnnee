@@ -25,7 +25,8 @@ public class RecoveryItem : MonoBehaviour
             }
             else
             {
-                _inventory.AddInInventory(item.ScriptableItem);
+                ScriptableInventoryItem scriptableInventoryItem = (ScriptableInventoryItem)item.ScriptableItem;
+                _inventory.AddInInventory(scriptableInventoryItem);
             }
             
             Destroy(collider.gameObject);

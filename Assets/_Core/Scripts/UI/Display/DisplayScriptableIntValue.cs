@@ -1,11 +1,12 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DisplayIntWidthInt : MonoBehaviour
+public class DisplayScriptableIntValue : MonoBehaviour
 {
     [SerializeField] private ScriptableInt _scriptableInt;
-    [SerializeField] private Text _text;
+    [SerializeField] private TextMeshProUGUI _text;
 
     private void LateUpdate()
     {

@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1288e4c0381e14ba9072726bef2cca, type: 3}
   m_Name: Star 2
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 21300000, guid: a616154e2d07d8b478b6305f8b567ee6, type: 3}
+  _buttonObject: {fileID: 5970080006266430863, guid: 160b29e473caa58459e74939371727ad,
+    type: 3}
