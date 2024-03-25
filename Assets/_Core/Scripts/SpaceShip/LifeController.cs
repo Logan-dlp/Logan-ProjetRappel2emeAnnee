@@ -8,14 +8,6 @@ public class LifeController : MonoBehaviour
     [SerializeField] private UnityEvent<float> _callbacksLife;
     [SerializeField] private UnityEvent _callbacksDeath;
 
-    private void Update()
-    {
-        if (_life <= 0)
-        {
-            _callbacksDeath?.Invoke();
-        }
-    }
-
     public void AddLife(int addLife)
     {
         _life += addLife;
@@ -33,6 +25,12 @@ public class LifeController : MonoBehaviour
         {
             _life = 0;
         }
+        
+        if (_life <= 0)
+        {
+            _callbacksDeath?.Invoke();
+        }
+        
         _callbacksLife?.Invoke(_life * .01f);
     }
 

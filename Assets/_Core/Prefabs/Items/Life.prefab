@@ -172,3 +172,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableItem: {fileID: 11400000, guid: b909a34ffc093184483a14e30776b5c2, type: 2}
+  _isPowerUp: 1

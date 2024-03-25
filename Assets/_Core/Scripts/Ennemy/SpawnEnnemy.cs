@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -13,7 +12,7 @@ public class SpawnEnnemy : MonoBehaviour
 
     private void Start()
     {
-        _handles.Number = 0;
+        _handles.SetNumber(0);
         StartCoroutine(SpawnEnnemyCoroutine());
     }
 
@@ -36,7 +35,7 @@ public class SpawnEnnemy : MonoBehaviour
     IEnumerator SpawnEnnemyCoroutine()
     {
         yield return new WaitForSeconds(_timeWaitAfterHandles);
-        _handles.Number++;
+        _handles.AddNumber(1);
         if (_handles.Number * 2 < 6)
         {
             for (int i = 0; i < _handles.Number; i++)

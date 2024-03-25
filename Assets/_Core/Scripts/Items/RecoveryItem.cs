@@ -1,51 +1,33 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(
-    typeof(Collider2D),
-    typeof(PowerUp))]
+[RequireComponent(typeof(Collider2D))]
 public class RecoveryItem : MonoBehaviour
 {
-    [SerializeField] private ScriptableInventory _scriptableInventory;
-    
-    [SerializeField] private ScriptableItem _sheildScriptableItem;
-    [SerializeField] private ScriptableItem _damageScriptableItem;
-    [SerializeField] private ScriptableItem _lifeScriptableItem;
-    [SerializeField] private ScriptableItem _coinScriptableItem;
-    
-    private PowerUp _powerUp;
+    private IPowerUp[] _powerUpArray;
+    private Inventory _inventory;
     
     private void Awake()
     {
-        _powerUp = GetComponent<PowerUp>();
-        _scriptableInventory.InventoryList = new List<ScriptableItem>();
+        _powerUpArray = GetComponents<IPowerUp>();
+        _inventory = GetComponent<Inventory>();
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.TryGetComponent<Item>(out Item item))
         {
-            if (item.ScriptableItem == _sheildScriptableItem)
+            if (item.IsPowerUp)
             {
-                _powerUp.Sheild();
-            }
-            else if (item.ScriptableItem == _damageScriptableItem)
-            {
-                _powerUp.Damage();
-            }
-            else if (item.ScriptableItem == _lifeScriptableItem)
-            {
-                _powerUp.Life();
-            }
-            else if (item.ScriptableItem == _coinScriptableItem)
-            {
-                _powerUp.Coin();
+                foreach (IPowerUp powerUp in _powerUpArray)
+                {
+                    powerUp.ActivePowerUp(item.ScriptableItem);
+                }
             }
             else
             {
-                _scriptableInventory.InventoryList.Add(item.ScriptableItem);
+                _inventory.AddInInventory(item.ScriptableItem);
             }
+            
             Destroy(collider.gameObject);
         }
     }
