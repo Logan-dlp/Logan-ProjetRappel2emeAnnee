@@ -19,7 +19,7 @@ public class DisplayInventory : MonoBehaviour
         {
             GameObject newItemInventory = Instantiate(_scriptableInventory.InventoryList[i].ButtonObject, transform);
             newItemInventory.AddComponent<Image>().sprite = _scriptableInventory.InventoryList[i].Sprite;
-            newItemInventory.GetComponent<OnClickInventory>().ScriptableInventoryItem = _scriptableInventory.InventoryList[i];
+            newItemInventory.GetComponent<ClickableInventory>().ScriptableInventoryItem = _scriptableInventory.InventoryList[i];
         }
     }
 }

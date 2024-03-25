@@ -4,10 +4,10 @@ using UnityEngine.Events;
 
 public class SetBoolForActiveEvent : MonoBehaviour
 {
-    [SerializeField] private UnityEvent _callbacksEvent1;
-    [SerializeField] private UnityEvent _callbacksEvent2;
-    [SerializeField] private UnityEvent _callbacksEvent3;
-    [SerializeField] private UnityEvent _callbacksUnactive;
+    [SerializeField] private UnityEvent _callbacksBool1;
+    [SerializeField] private UnityEvent _callbacksBool2;
+    [SerializeField] private UnityEvent _callbacksBool3;
+    [SerializeField] private UnityEvent _callbacksBoolUnactive;
     
     private bool _eventAcitve1 = false;
     private bool _eventAcitve2 = false;
@@ -50,19 +50,19 @@ public class SetBoolForActiveEvent : MonoBehaviour
     {
         if (_eventAcitve1)
         {
-            _callbacksEvent1?.Invoke();
+            _callbacksBool1?.Invoke();
         }
         if (_eventAcitve2)
         {
-            _callbacksEvent2?.Invoke();
+            _callbacksBool2?.Invoke();
         }
         if (_eventAcitve3)
         {
-            _callbacksEvent3?.Invoke();
+            _callbacksBool3?.Invoke();
         }
         if (!_eventAcitve1 && !_eventAcitve2 && !_eventAcitve3)
         {
-            _callbacksUnactive?.Invoke();
+            _callbacksBoolUnactive?.Invoke();
         }
     }
 

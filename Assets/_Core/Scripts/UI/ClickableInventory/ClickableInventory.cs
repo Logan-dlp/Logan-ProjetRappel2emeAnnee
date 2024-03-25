@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class OnClickInventory : MonoBehaviour, IOnClickInventoryItem
+public class ClickableInventory : MonoBehaviour
 {
     [SerializeField] private ScriptableInventoryItem _scriptableInventoryItem;
     public ScriptableInventoryItem ScriptableInventoryItem

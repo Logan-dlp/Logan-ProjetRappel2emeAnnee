@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour, ISerializable<InventoryDTO>
 
     private void Awake()
     {
-        _scriptableInventory.InventoryList = new List<ScriptableInventoryItem>();
+        _scriptableInventory.InventoryList.Clear();
     }
 
     public void AddInInventory(ScriptableInventoryItem scriptableItem)

@@ -25,7 +25,7 @@ public class RecoveryItem : MonoBehaviour
             }
             else
             {
-                ScriptableInventoryItem scriptableInventoryItem = (ScriptableInventoryItem)item.ScriptableItem;
+                var scriptableInventoryItem = (ScriptableInventoryItem)item.ScriptableItem;
                 _inventory.AddInInventory(scriptableInventoryItem);
             }
             

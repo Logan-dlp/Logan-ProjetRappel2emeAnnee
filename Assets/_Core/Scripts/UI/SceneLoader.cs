@@ -8,9 +8,9 @@ public class SceneLoader : MonoBehaviour
 
     private void Awake()
     {
-        foreach (string scenesName in _loadSceneInAwake)
+        foreach (string name in _loadSceneInAwake)
         {
-            SceneManager.LoadScene(scenesName, LoadSceneMode.Additive);
+            SceneManager.LoadScene(name, LoadSceneMode.Additive);
         }
     }
 
